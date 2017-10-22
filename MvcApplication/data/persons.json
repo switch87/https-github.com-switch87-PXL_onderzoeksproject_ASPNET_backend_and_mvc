@@ -1,0 +1,13 @@
+﻿  [ 
+    {"id": 0, "Name" : "Jon", "Surname" : "Snow", "BirthDate" : 281, "Death" : null, "Sex" : "M", "Origin" : "Waltwilder", "Allegiance" : "House Stark"},
+    {"id": 1, "Name" : "Sansa", "Surname" : "Stark", "BirthDate" : 285, "Death" : null, "Sex" : "F", "Origin" : "Waltwilder", "Allegiance" : "House Stark"},
+    {"id": 2, "Name" : "Arya", "Surname" : "Stark", "BirthDate" : 287, "Death" : null, "Sex" : "F", "Origin" : "Waltwilder", "Allegiance" : "House Stark"},
+    {"id": 3, "Name" : "Bran", "Surname" : "Stark", "BirthDate" : 288, "Death" : null, "Sex" : "M", "Origin" : "Waltwilder", "Allegiance" : "House Stark"},
+    {"id": 4, "Name" : "Edmure", "Surname" : "Tully", "BirthDate" : null, "Death" : null, "Sex" : "M", "Origin" : "Anderlecht", "Allegiance" : "House Stark"},
+    {"id": 5, "Name" : "Tormund", "Surname" : null, "BirthDate" : null, "Death" : null, "Sex" : "M", "Origin" : "Beringen", "Allegiance" : "Jon Snow"},
+    {"id": 6, "Name" : "Lyanna", "Surname" : "Mormont", "BirthDate" : 293, "Death" : null, "Sex" : "F", "Origin" : "Braschaat", "Allegiance" : "House Stark"},
+    {"id": 7, "Name" : "Benjen", "Surname" : "Stark", "BirthDate" : null, "Death" : 304, "Sex" : "M", "Origin" : "Waltwilder", "Allegiance" : "House Stark"},
+    {"id": 8, "Name" : "Cersei", "Surname" : "Lannister", "BirthDate" : 261, "Death" : null, "Sex" : "F", "Origin" : "Koekelberg", "Allegiance" : "House Lannister"},
+    {"id": 9, "Name" : "Jaime", "Surname" : "Lannister", "BirthDate" : 261, "Death" : null, "Sex" : "M", "Origin" : "Koekelberg", "Allegiance" : "House Lannister"},
+    {"id": 10, "Name" : "Qyburn", "Surname" : null, "BirthDate" : null, "Death" : null, "Sex" : "M", "Origin" : "Haren", "Allegiance" : "House Lannister"}
+  ]

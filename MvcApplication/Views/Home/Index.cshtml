@@ -1,0 +1,73 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@using Microsoft.CodeAnalysis.CSharp.Syntax
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="col-md-12">
+    <div id="personsmodal" class="col-md-12 well">
+        <h1>Person selector with ASP.NET Core MVC</h1>
+        <hr>
+        <ul appScroll class="divScroll col-md-6 list-group">
+            <span>
+                @foreach (var person in ViewBag.persons)
+                {
+                    <li
+                        id="person@( person.Id )"
+                        class="well-sm"
+                        onclick="setSelectedPerson(@person.Id)">
+                        <span class="col-xs-2">@person.Name</span>
+                        <span class="col-xs-2">@person.Surname</span>
+                        <span class="col-xs-1">@person.BirthDate</span>
+                        <span class="col-xs-1">@person.Sex</span>
+                        <span class="col-xs-3">@person.Origin</span>
+                        <span class="col-xs-3">@person.Allegiance</span>
+                    </li>
+                }
+            </span>
+        </ul>
+        <div id="selectedperson" hide class="col-md-6 well-sm">
+        </div>
+        <form class="col-md-12">
+            <div class="form-group col-xs-6">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name">
+                <label for="surname">Surname:</label>
+                <input type="text" class="form-control" id="surname">
+            </div>
+            <div class="col-xs-6 form-group"></div>
+            <div class="col-xs-12">
+                <button class="btn-success btn">Save</button>
+                <button class="btn-danger btn">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+        var selectedPerson = -1;
+        var setSelectedPerson = function(id) {
+            console.log(selectedPerson);
+            if (id === selectedPerson) {
+                selectedPerson = -1;
+                $('#selectedperson').html("");
+                $('#person' + id).removeClass("active");
+                $('#selectedperson').hide();
+            } else {
+                $.ajax({
+                    type: 'GET',
+                    url: "@Url.Content("Home/PersonDetails/")",
+                    data: { id: id },
+                    dataType: "html",
+                    success: function(result) {
+                $('#person' + selectedPerson).removeClass("active");
+                        selectedPerson = id;
+                        $('#selectedperson').html(result);
+                $('#person' + id).addClass("active");
+                        $('#selectedperson').show();
+                    }
+                });
+            }
+        }
+    $(document).ready(function() {
+        $('#selectedperson').hide();
+    });
+</script>
